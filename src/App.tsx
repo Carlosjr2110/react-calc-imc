@@ -4,6 +4,7 @@ import poweredImage from './assets/powered.png'
 import { levels, calculateImc, Level } from './healpers/imc'
 import { GridItem } from './Components/Griditem'
 import leftArrowImage from './assets/leftarrow.png'
+import logo from './assets/LogoDev.png';
 
 
 const App = () =>{
@@ -31,7 +32,7 @@ const App = () =>{
     <div className={styles.main}>
       <header>
         <div className={styles.headerContainer}>
-          Powered by CarlosJr
+          <img style={{width: '70px', height: '70px', borderRadius: '100px'}} src={logo} alt="" />
         </div>
       </header>
       <div className={styles.container}>
@@ -47,7 +48,7 @@ const App = () =>{
           />
           <input 
           type="number"
-          placeholder='Digite o seu peso. Ex: 75.3 (em metros)' 
+          placeholder='Digite o seu peso. Ex: 75.3 (em kg)' 
           value={weightField > 0 ? weightField : ''}
           onChange={e => setWeightField(parseFloat(e.target.value))}
           disabled={toshow ? true : false}
